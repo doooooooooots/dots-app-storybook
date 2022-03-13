@@ -1,5 +1,4 @@
 import React from 'react';
-import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 import { addDecorator } from '@storybook/react';
@@ -34,6 +33,7 @@ export const decorators = [
     );
   }
 ];
+
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
