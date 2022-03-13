@@ -1,8 +1,11 @@
-import { Action } from './action';
+import React from "react";
+import { Action } from "./action";
 
 export default {
-  title: 'Design System/Action',
-  component: Action
+  title: "Design System/Action",
+  component: Action,
 };
 
-export const Default = () => <Action />;
+export function Default() {
+  return <Action />;
+}

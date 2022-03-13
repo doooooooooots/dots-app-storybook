@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "no-param-reassign": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"]
+}

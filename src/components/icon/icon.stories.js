@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import styled, { css } from 'styled-components';
-import { Icon } from './icon';
-import { icons } from '../../shared/icons';
+import React, { Fragment } from "react";
+import styled, { css } from "styled-components";
+import { Icon } from "./icon";
+import { icons } from "../../shared/icons";
 
 const Meta = styled.div`
   color: #666;
@@ -48,53 +48,61 @@ const List = styled.ul`
 `;
 
 export default {
-  title: 'Design System/Icon',
-  component: Icon
+  title: "Design System/Icon",
+  component: Icon,
 };
 
-export const Labels = (args) => (
-  <Fragment>
-    There are {Object.keys(icons).length} icons
+export function Labels() {
+  return (
+    <>
+      There are {Object.keys(icons).length} icons
+      <List>
+        {Object.keys(icons).map((key) => (
+          <Item key={key}>
+            <Icon icon={key} aria-hidden />
+            <Meta>{key}</Meta>
+          </Item>
+        ))}
+      </List>
+    </>
+  );
+}
+
+export function NoLabels() {
+  return (
     <List>
       {Object.keys(icons).map((key) => (
-        <Item key={key}>
-          <Icon icon={key} aria-hidden />
-          <Meta>{key}</Meta>
+        <Item minimal key={key}>
+          <Icon icon={key} aria-label={key} />
         </Item>
       ))}
     </List>
-  </Fragment>
-);
+  );
+}
 
-export const NoLabels = (args) => (
-  <List>
-    {Object.keys(icons).map((key) => (
-      <Item minimal key={key}>
-        <Icon icon={key} aria-label={key} />
-      </Item>
-    ))}
-  </List>
-);
+NoLabels.storyName = "no labels";
 
-NoLabels.storyName = 'no labels';
-
-export const Inline = (args) => (
-  <Fragment>
-    this is an inline <Icon {...args} /> icon (default)
-  </Fragment>
-);
+export function Inline() {
+  return (
+    <>
+      this is an inline <Icon /> icon (default)
+    </>
+  );
+}
 Inline.args = {
-  icon: 'facehappy',
-  'aria-label': 'Happy face'
+  icon: "facehappy",
+  "aria-label": "Happy face",
 };
 
-export const Block = (args) => (
-  <Fragment>
-    this is a block <Icon {...args} /> icon
-  </Fragment>
-);
+export function Block() {
+  return (
+    <>
+      this is a block <Icon /> icon
+    </>
+  );
+}
 Block.args = {
-  icon: 'facehappy',
-  'aria-label': 'Happy face',
-  block: true
+  icon: "facehappy",
+  "aria-label": "Happy face",
+  block: true,
 };
