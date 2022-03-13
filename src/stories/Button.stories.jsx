@@ -8,7 +8,6 @@ export default {
 };
 
 export const Default = () => <ActionButton onClick={action('clicked')}>Default Button</ActionButton>;
-
 export const Primary = () => (
   <ActionButton primary onClick={action('clicked')}>
     Primary Button
