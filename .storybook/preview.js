@@ -3,8 +3,6 @@ import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 import { addDecorator } from '@storybook/react';
-import { createEmotionCache } from '../src/lib/emotion';
-const clientSideEmotionCache = createEmotionCache();
 import { useDarkMode } from 'storybook-dark-mode';
 import { createTheme } from './theme/index';
 import { ThemeProvider } from '@mui/material/styles';
@@ -24,16 +22,14 @@ export const decorators = [
     const mode = useDarkMode();
     return (
       <>
-        <CacheProvider value={clientSideEmotionCache}>
-          <ThemeProvider
-            theme={createTheme({
-              mode: mode ? 'dark' : 'light'
-            })}
-          >
-            <CssBaseline />
-            <Story />
-          </ThemeProvider>
-        </CacheProvider>
+        <ThemeProvider
+          theme={createTheme({
+            mode: mode ? 'dark' : 'light'
+          })}
+        >
+          <CssBaseline />
+          <Story />
+        </ThemeProvider>
       </>
     );
   }

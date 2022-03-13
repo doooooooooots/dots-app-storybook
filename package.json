@@ -2,26 +2,6 @@
   "name": "@dots.cool/design-system",
   "version": "0.1.7",
   "private": false,
-  "dependencies": {
-    "@emotion/cache": "^11.7.1",
-    "@emotion/react": "^11.8.2",
-    "@emotion/styled": "^11.8.1",
-    "@mui/material": "^5.5.0",
-    "@reduxjs/toolkit": "^1.8.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "eslint-config-prettier": "^8.5.0",
-    "polished": "^4.1.1",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-redux": "^7.2.6",
-    "react-scripts": "4.0.3",
-    "storybook-dark-mode": "^1.0.9",
-    "styled-components": "^5.2.1",
-    "web-vitals": "^1.0.1"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "cross-env BABEL_ENV=production babel src -d dist",
@@ -70,6 +50,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.0",
+    "@reduxjs/toolkit": "^1.8.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "polished": "^4.1.1",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.6",
+    "react-scripts": "4.0.3",
+    "storybook-dark-mode": "^1.0.9",
+    "styled-components": "^5.2.1",
+    "web-vitals": "^1.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
