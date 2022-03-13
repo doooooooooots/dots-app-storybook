@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
-
 import { Icon } from './icon';
 import { icons } from '../../shared/icons';
 
