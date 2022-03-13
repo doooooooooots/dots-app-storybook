@@ -1,6 +1,6 @@
 {
   "name": "@dots.cool/design-system",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": false,
   "scripts": {
     "start": "react-scripts start",
