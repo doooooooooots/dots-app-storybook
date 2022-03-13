@@ -1,7 +1,7 @@
 import React from 'react';
-
+import Button from '@mui/material/Button'
 export interface ButtonProps {
   primary?: boolean
 }
 
-export const Button = ({primary = false}) => <button>{primary ? 'Click ICI' : 'Click plutot lààà'}</button>
+export const ActionButton = ({primary = false}) => <Button variant='contained' color='secondary'>{primary ? 'Click ICI' : 'Click plutot lààà'}</Button>

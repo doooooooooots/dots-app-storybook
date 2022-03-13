@@ -1,15 +1,16 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '../components/Button';
+import { ActionButton } from '../components/Button';
 
 export default {
   title: 'Button',
-  component: Button
+  component: ActionButton
 };
 
-export const Default = () => <Button onClick={action('clicked')}>Default Button</Button>;
+export const Default = () => <ActionButton onClick={action('clicked')}>Default Button</ActionButton>;
+
 export const Primary = () => (
-  <Button primary onClick={action('clicked')}>
+  <ActionButton primary onClick={action('clicked')}>
     Primary Button
-  </Button>
+  </ActionButton>
 );
