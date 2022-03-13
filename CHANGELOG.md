@@ -1,3 +1,15 @@
+# v0.1.7 (Sun Mar 13 2022)
+
+#### 🐛 Bug Fix
+
+- remove icons [#4](https://github.com/doooooooooots/design-system/pull/4) ([@doooooooooots](https://github.com/doooooooooots))
+
+#### Authors: 1
+
+- [@doooooooooots](https://github.com/doooooooooots)
+
+---
+
 # v0.1.6 (Sun Mar 13 2022)
 
 #### 🐛 Bug Fix
