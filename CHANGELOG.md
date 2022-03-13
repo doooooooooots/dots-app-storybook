@@ -1,3 +1,16 @@
+# v0.1.8 (Sun Mar 13 2022)
+
+#### ⚠️ Pushed to `main`
+
+- remove emotion cache ([@doooooooooots](https://github.com/doooooooooots))
+- Update chromatic.yml ([@doooooooooots](https://github.com/doooooooooots))
+
+#### Authors: 1
+
+- [@doooooooooots](https://github.com/doooooooooots)
+
+---
+
 # v0.1.7 (Sun Mar 13 2022)
 
 #### 🐛 Bug Fix
