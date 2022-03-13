@@ -2,6 +2,11 @@
   "name": "@dots.cool/design-system",
   "version": "0.1.10",
   "private": false,
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
