@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.0",
+    "@reduxjs/toolkit": "^1.8.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "polished": "^4.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.6",
     "react-scripts": "4.0.3",
+    "storybook-dark-mode": "^1.0.9",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"
   },
@@ -21,7 +27,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "build-storybook-docs": "build-storybook  --docs",
-    "release": "auto shipit --base-branch=main"
+    "release": "auto shipit --base-branch=main",
+    "init-msw": "msw init public/"
   },
   "eslintConfig": {
     "extends": [
@@ -68,13 +75,21 @@
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-storyshots": "^6.4.19",
     "@storybook/node-logger": "^6.4.19",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "auto": "^10.34.1",
+    "chromatic": "^6.5.2",
     "cross-env": "^7.0.3",
-    "prettier": "^2.5.1"
+    "msw": "^0.36.8",
+    "msw-storybook-addon": "^1.6.0",
+    "prettier": "^2.5.1",
+    "react-test-renderer": "^17.0.2"
+  },
+  "msw": {
+    "workerDirectory": "public"
   },
   "description": "Dots design system",
   "main": "dist/index.js",

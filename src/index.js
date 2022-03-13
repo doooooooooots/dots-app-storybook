@@ -5,8 +5,9 @@ import * as icons from './shared/icons';
 
 export { styles, global, animation, icons };
 
-export * from './Avatar';
-export * from './Badge';
-export * from './Button';
-export * from './Icon';
-export * from './Link';
+export * from './components/avatar/avatar';
+export * from './components/badge/badge';
+export * from './components/button/button';
+export * from './components/button/icon';
+export * from './components/link/link';
+export * from './components/task-list/task';
