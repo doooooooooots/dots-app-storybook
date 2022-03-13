@@ -1,3 +1,15 @@
+# v0.1.4 (Sun Mar 13 2022)
+
+#### 🐛 Bug Fix
+
+- fix icon export [#1](https://github.com/doooooooooots/design-system/pull/1) ([@doooooooooots](https://github.com/doooooooooots))
+
+#### Authors: 1
+
+- [@doooooooooots](https://github.com/doooooooooots)
+
+---
+
 # v0.1.3 (Sun Mar 13 2022)
 
 #### ⚠️ Pushed to `main`
