@@ -1,5 +1,6 @@
+import React from "react";
 import { Button } from "@mui/material";
 
-export function Action({ loading, username, src, size, ...props }) {
+export function Action() {
   return <Button>Click here</Button>;
 }

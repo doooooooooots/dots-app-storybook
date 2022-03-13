@@ -1,12 +1,14 @@
 import React from "react";
-import Task from "./task";
+import { Task } from "./task";
 
 export default {
   component: Task,
   title: "Design System/Task",
 };
 
-const Template = (args) => <Task {...args} />;
+function Template(args) {
+  return <Task {...args} />;
+}
 
 export const Default = Template.bind({});
 Default.args = {

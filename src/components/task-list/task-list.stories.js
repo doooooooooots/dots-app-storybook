@@ -1,9 +1,9 @@
+import PropTypes from "prop-types";
 import React from "react";
-import TaskList from "./task-list";
-import * as TaskStories from "./task.stories";
-
 import { Provider } from "react-redux";
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import TaskList from "./task-list";
+import * as TaskStories from "./task.stories";
 
 // A super-simple mock of the state of the store
 export const MockedState = {
@@ -20,31 +20,38 @@ export const MockedState = {
 };
 
 // A super-simple mock of a redux store
-const Mockstore = ({ taskboxState, children }) => (
-  <Provider
-    store={configureStore({
-      reducer: {
-        taskbox: createSlice({
-          name: "taskbox",
-          initialState: taskboxState,
-          reducers: {
-            updateTaskState: (state, action) => {
-              const { id, newTaskState } = action.payload;
-              const task = state.tasks.findIndex(
-                (task) => task.id === id
-              );
-              if (task >= 0) {
-                state.tasks[task].state = newTaskState;
-              }
+function Mockstore({ taskboxState, children }) {
+  return (
+    <Provider
+      store={configureStore({
+        reducer: {
+          taskbox: createSlice({
+            name: "taskbox",
+            initialState: taskboxState,
+            reducers: {
+              updateTaskState: (state, action) => {
+                const { id, newTaskState } = action.payload;
+                const task = state.tasks.findIndex(
+                  (_task) => _task.id === id
+                );
+                if (task >= 0) {
+                  state.tasks[task].state = newTaskState;
+                }
+              },
             },
-          },
-        }).reducer,
-      },
-    })}
-  >
-    {children}
-  </Provider>
-);
+          }).reducer,
+        },
+      })}
+    >
+      {children}
+    </Provider>
+  );
+}
+
+Mockstore.propTypes = {
+  children: PropTypes.any,
+  taskboxState: PropTypes.any,
+};
 
 export default {
   component: TaskList,
@@ -55,7 +62,9 @@ export default {
   excludeStories: /.*MockedState$/,
 };
 
-const Template = (args) => <TaskList {...args} />;
+function Template(args) {
+  return <TaskList {...args} />;
+}
 
 export const Default = Template.bind({});
 Default.decorators = [

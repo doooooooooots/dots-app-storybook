@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unused-prop-types */
 import React from "react";
-import Task from "./task";
 import { useDispatch, useSelector } from "react-redux";
-import { updateTaskState } from "../../lib/store";
 import PropTypes from "prop-types";
+import { Task } from "./task";
+import { updateTaskState } from "../../lib/store";
 
 export default function TaskList() {
   // We're retrieving our state from the store
@@ -41,7 +42,7 @@ export default function TaskList() {
   );
   if (status === "loading") {
     return (
-      <div className="list-items" data-testid="loading" key={"loading"}>
+      <div className="list-items" data-testid="loading" key="loading">
         {LoadingRow}
         {LoadingRow}
         {LoadingRow}
@@ -53,7 +54,7 @@ export default function TaskList() {
   }
   if (tasks.length === 0) {
     return (
-      <div className="list-items" key={"empty"} data-testid="empty">
+      <div className="list-items" key="empty" data-testid="empty">
         <div className="wrapper-message">
           <span className="icon-check" />
           <div className="title-message">You have no tasks</div>
@@ -64,13 +65,13 @@ export default function TaskList() {
   }
 
   return (
-    <div className="list-items" data-testid="success" key={"success"}>
+    <div className="list-items" data-testid="success" key="success">
       {tasks.map((task) => (
         <Task
           key={task.id}
           task={task}
-          onPinTask={(task) => pinTask(task)}
-          onArchiveTask={(task) => archiveTask(task)}
+          onPinTask={(_task) => pinTask(_task)}
+          onArchiveTask={(_task) => archiveTask(_task)}
         />
       ))}
     </div>

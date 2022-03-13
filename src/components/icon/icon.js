@@ -29,6 +29,7 @@ export function Icon({ icon, block, ...props }) {
       width="20px"
       height="20px"
       block={block}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     >
       <Path d={icons[icon]} />

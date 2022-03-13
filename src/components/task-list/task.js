@@ -1,6 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-export default function Task() {
+export function Task() {
   return <div>ok</div>;
 }
