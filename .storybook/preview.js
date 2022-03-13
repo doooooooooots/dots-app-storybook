@@ -18,8 +18,8 @@ export const decorators = [
     });
     return (
       <>
+        <CssBaseline />
         <ThemeProvider theme={theme}>
-          <CssBaseline />
           <Story />
         </ThemeProvider>
       </>
