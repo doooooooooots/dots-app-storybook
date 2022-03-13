@@ -4,4 +4,4 @@ export interface ButtonProps {
   primary?: boolean
 }
 
-export const Button = ({primary:Boolean = false}) => <button>Clic ici</button>
+export const Button = ({primary = false}) => <button>{primary ? 'Click ici' : 'Click là'}</button>
