@@ -1,3 +1,15 @@
+# v0.1.6 (Sun Mar 13 2022)
+
+#### 🐛 Bug Fix
+
+- remove unused files [#3](https://github.com/doooooooooots/design-system/pull/3) ([@doooooooooots](https://github.com/doooooooooots))
+
+#### Authors: 1
+
+- [@doooooooooots](https://github.com/doooooooooots)
+
+---
+
 # v0.1.5 (Sun Mar 13 2022)
 
 #### 🐛 Bug Fix
