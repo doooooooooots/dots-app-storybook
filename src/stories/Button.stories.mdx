@@ -1,12 +1,12 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-import MenuList from '../components/lists/MenuList';
+import Button from '../components/Button';
 
 <Meta
-  title='Design System/MenuList'
-  component={MenuList}
+  title='Design System/Button'
+  component={Button}
   argTypes={{
-    loading: {
+    primary: {
       control: 'boolean',
       description: 'Use the loading state to indicate that the data Avatar needs is still loading.',
       table: {
@@ -16,7 +16,7 @@ import MenuList from '../components/lists/MenuList';
     },
     username: {
       description:
-        'MenuList falls back to the user’s initial when no image is provided. Supply a `username` and omit `src` to see what this looks like.',
+        'Button falls back to the user’s initial when no image is provided. Supply a `username` and omit `src` to see what this looks like.',
       table: {
         defaultValue: {
           summary: 'loading'
@@ -32,7 +32,7 @@ import MenuList from '../components/lists/MenuList';
       }
     },
     size: {
-      description: 'MenuList comes in four sizes. In most cases, you’ll be fine with `medium`.',
+      description: 'Button comes in four sizes. In most cases, you’ll be fine with `medium`.',
       table: {
         defaultValue: {
           summary: 'medium'
@@ -42,7 +42,7 @@ import MenuList from '../components/lists/MenuList';
   }}
 />
 
-# MenuList
+# Button
 
 ## Displays an image that represents a user or organization
 
@@ -50,7 +50,7 @@ Use an avatar for attributing actions or content to specific users.
 
 The user's name should _always_ be present when using Avatar – either printed beside the avatar or in a tooltip.
 
-export const Template = (args) => <MenuList {...args} />;
+export const Template = (args) => <Button {...args} />;
 
 <Story
   name='standard'
@@ -69,10 +69,10 @@ export const Template = (args) => <MenuList {...args} />;
 
 <Story name='sizes'>
   <div>
-    <MenuList size='large' username='Tom Coleman' src='https://avatars2.githubusercontent.com/u/132554' />
-    <MenuList size='medium' username='Tom Coleman' src='https://avatars2.githubusercontent.com/u/132554' />
-    <MenuList size='small' username='Tom Coleman' src='https://avatars2.githubusercontent.com/u/132554' />
-    <MenuList size='tiny' username='Tom Coleman' src='https://avatars2.githubusercontent.com/u/132554' />
+    <Button size='large' username='Tom Coleman' src='https://avatars2.githubusercontent.com/u/132554' />
+    <Button size='medium' username='Tom Coleman' src='https://avatars2.githubusercontent.com/u/132554' />
+    <Button size='small' username='Tom Coleman' src='https://avatars2.githubusercontent.com/u/132554' />
+    <Button size='tiny' username='Tom Coleman' src='https://avatars2.githubusercontent.com/u/132554' />
   </div>
 </Story>
 
@@ -84,10 +84,10 @@ Avatar should be used sparingly in situations without access to images.
 
 <Story name='initials'>
   <div>
-    <MenuList username='Tom Coleman' />
-    <MenuList username='Dominic Nguyen' />
-    <MenuList username='Kyle Suss' />
-    <MenuList username='Michael Shilman' />
+    <Button username='Tom Coleman' />
+    <Button username='Dominic Nguyen' />
+    <Button username='Kyle Suss' />
+    <Button username='Michael Shilman' />
   </div>
 </Story>
 
@@ -97,10 +97,10 @@ The loading state is used when the image or username is, well, loading.
 
 <Story name='loading'>
   <div>
-    <MenuList size='large' loading />
-    <MenuList size='medium' loading />
-    <MenuList size='small' loading />
-    <MenuList size='tiny' loading />
+    <Button size='large' loading />
+    <Button size='medium' loading />
+    <Button size='small' loading />
+    <Button size='tiny' loading />
   </div>
 </Story>
 
@@ -112,7 +112,7 @@ Experiment with this story with the Controls addon in the Canvas tab.
   <Story
     name='controls'
     args={{
-      loading: false,
+      primary: false,
       size: 'tiny',
       username: 'Dominic Nguyen',
       src: 'https://avatars2.githubusercontent.com/u/263385'
