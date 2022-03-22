@@ -1,6 +1,6 @@
-import { ToggleButton as MuiToggleButton } from "@mui/material";
+import MuiToggleButton from "@mui/material/ToggleButton";
 import { styled } from "@mui/system";
 
-const ToggleButton = styled(MuiToggleButton)({});
+const ToggleButton = styled(MuiToggleButton)();
 
 export default ToggleButton;

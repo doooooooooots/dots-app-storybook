@@ -3,7 +3,6 @@ export { default as Button } from "./button/Button";
 export { default as Box } from "./box/Box";
 export { default as Card } from "./card/Card";
 export { default as Checkbox } from "./checkbox/Checkbox";
-export { default as DateTimePicker } from "./date-time-picker/DateTimePicker";
 export { default as FormControl } from "./form/FormControl";
 export { default as FormControlLabel } from "./form/FormControlLabel";
 export { default as FormLabel } from "./form/FormLabel";
