@@ -1,0 +1,54 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Select from "../components/select/Select";
+import MenuItem from "../components/menu-item/MenuItem";
+
+<Meta title="Design System/Select" component={Select} />
+
+# Select
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <Select
+      labelId="demo-simple-select-label"
+      id="demo-simple-select"
+      value={20}
+      label="Age"
+    >
+      <MenuItem value={10}>Ten</MenuItem>
+      <MenuItem value={20}>Twenty</MenuItem>
+      <MenuItem value={30}>Thirty</MenuItem>
+    </Select>
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => (
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={20}
+    label="Age"
+  >
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+  </Select>
+);
+
+<Story name="standard">{Template.bind({})}</Story>

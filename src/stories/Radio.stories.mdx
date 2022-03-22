@@ -1,0 +1,63 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Radio from "../components/radio/Radio";
+import RadioGroup from "../components/radio/RadioGroup";
+import FormControlLabel from "../components/form/FormControlLabel";
+import FormControl from "../components/form/FormControl";
+import FormLabel from "../components/form/FormLabel";
+
+<Meta title="Design System/Radio" component={Radio} />
+
+# Radio
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <FormControl>
+      <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+      <RadioGroup
+        aria-labelledby="demo-radio-buttons-group-label"
+        defaultValue="female"
+        name="radio-buttons-group"
+      >
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+        <FormControlLabel value="other" control={<Radio />} label="Other" />
+      </RadioGroup>
+    </FormControl>
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => (
+  <div>
+    <FormControl>
+      <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+      <RadioGroup
+        aria-labelledby="demo-radio-buttons-group-label"
+        defaultValue="female"
+        name="radio-buttons-group"
+      >
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+        <FormControlLabel value="other" control={<Radio />} label="Other" />
+      </RadioGroup>
+    </FormControl>
+  </div>
+);
+
+<Story name="standard">{Template.bind({})}</Story>

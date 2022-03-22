@@ -1,0 +1,33 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Paper from "../components/paper/Paper";
+
+<Meta title="Design System/Paper" component={Paper} />
+
+# Paper
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <Paper>Paper</Paper>
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => <Paper>Paper</Paper>;
+
+<Story name="standard">{Template.bind({})}</Story>

@@ -1,0 +1,67 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import FormatAlignLeftIcon from "@mui/icons-material/FormatAlignLeft";
+import FormatAlignCenterIcon from "@mui/icons-material/FormatAlignCenter";
+import FormatAlignRightIcon from "@mui/icons-material/FormatAlignRight";
+import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
+
+import { ToggleButton } from "../components/toggle-button/ToggleButton";
+import { ToggleButtonGroup } from "../components/toggle-button/ToggleButtonGroup";
+
+<Meta title="Design System/ToggleButton" component={ToggleButtonGroup} />
+
+# Button
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <ToggleButtonGroup value={"left"} aria-label="text alignment">
+      <ToggleButton value="left" aria-label="left aligned">
+        <FormatAlignLeftIcon />
+      </ToggleButton>
+      <ToggleButton value="center" aria-label="centered">
+        <FormatAlignCenterIcon />
+      </ToggleButton>
+      <ToggleButton value="right" aria-label="right aligned">
+        <FormatAlignRightIcon />
+      </ToggleButton>
+      <ToggleButton value="justify" aria-label="justified" disabled>
+        <FormatAlignJustifyIcon />
+      </ToggleButton>
+    </ToggleButtonGroup>
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => (
+  <ToggleButtonGroup {...args} value={"left"} aria-label="text alignment">
+    <ToggleButton value="left" aria-label="left aligned">
+      <FormatAlignLeftIcon />
+    </ToggleButton>
+    <ToggleButton value="center" aria-label="centered">
+      <FormatAlignCenterIcon />
+    </ToggleButton>
+    <ToggleButton value="right" aria-label="right aligned">
+      <FormatAlignRightIcon />
+    </ToggleButton>
+    <ToggleButton value="justify" aria-label="justified" disabled>
+      <FormatAlignJustifyIcon />
+    </ToggleButton>
+  </ToggleButtonGroup>
+);
+
+<Story name="standard">{Template.bind({})}</Story>

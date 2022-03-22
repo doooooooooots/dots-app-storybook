@@ -1,10 +1,10 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 
-import Button from "../components/button/Button";
+import DateTimePicker from "../components/date-time-picker/DateTimePicker";
 
 <Meta
-  title="Design System/Button"
-  component={Button}
+  title="Design System/DateTimePicker"
+  component={DateTimePicker}
   argTypes={{
     variant: {
       options: ["text", "contained", "outlined"],
@@ -29,7 +29,7 @@ blablabla text
 
 <Story name="initials">
   <div>
-    <Button variant="text">Button</Button>
+    <DateTimePicker label="read-only" readOnly />
   </div>
 </Story>
 
@@ -37,6 +37,8 @@ blablabla text
 
 blablabla text
 
-export const Template = (args) => <Button {...args}>Button</Button>;
+export const Template = (args) => (
+  <DateTimePicker {...args} label="read-only" readOnly />
+);
 
 <Story name="standard">{Template.bind({})}</Story>

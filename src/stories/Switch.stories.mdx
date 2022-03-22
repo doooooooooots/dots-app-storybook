@@ -1,0 +1,54 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Switch from "../components/switch/Switch";
+
+<Meta title="Design System/Switch" component={Switch} />
+
+# Switch
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <Switch defaultChecked />
+    <Switch />
+    <Switch disabled defaultChecked />
+    <Switch disabled />
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => (
+  <div>
+    <Switch defaultChecked size="small" />
+    <Switch defaultChecked size="medium" />
+    <br />
+    <Switch disabled defaultChecked size="small" />
+    <Switch disabled defaultChecked size="medium" />
+    <br />
+    <Switch size="small" />
+    <Switch size="medium" />
+    <br />
+    <Switch disabled size="small" />
+    <Switch disabled size="medium" />
+    <br />
+    <Switch defaultChecked color="secondary" />
+    <Switch defaultChecked color="warning" />
+    <Switch defaultChecked color="default" />
+  </div>
+);
+
+<Story name="standard">{Template.bind({})}</Story>

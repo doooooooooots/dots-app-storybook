@@ -1,0 +1,33 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Rating from "../components/rating/Rating";
+
+<Meta title="Design System/Rating" component={Rating} />
+
+# Rating
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <Rating name="simple-controlled" value={4} />
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => <Rating name="simple-controlled" value={4} />;
+
+<Story name="standard">{Template.bind({})}</Story>

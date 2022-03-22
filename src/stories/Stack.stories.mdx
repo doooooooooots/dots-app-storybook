@@ -1,0 +1,44 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Stack from "../components/stack/Stack";
+import Paper from "../components/paper/Paper";
+
+<Meta title="Design System/Stack" component={Stack} />
+
+# Stack
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <Stack direction="column" spacing={2}>
+      <Paper>Item 1</Paper>
+      <Paper>Item 2</Paper>
+      <Paper>Item 3</Paper>
+    </Stack>
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => (
+  <Stack direction="row" spacing={2}>
+    <Paper>Item 1</Paper>
+    <Paper>Item 2</Paper>
+    <Paper>Item 3</Paper>
+  </Stack>
+);
+
+<Story name="standard">{Template.bind({})}</Story>

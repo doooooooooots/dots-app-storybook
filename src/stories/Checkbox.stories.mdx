@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Checkbox from "../components/checkbox/Checkbox";
+
+<Meta title="Design System/Checkbox" component={Checkbox} />
+
+# Checkbox
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <Checkbox defaultChecked />
+    <Checkbox />
+    <Checkbox disabled />
+    <Checkbox disabled checked />
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => (
+  <div>
+    <Checkbox defaultChecked />
+    <Checkbox />
+    <Checkbox disabled />
+    <Checkbox disabled checked />
+  </div>
+);
+
+<Story name="standard">{Template.bind({})}</Story>

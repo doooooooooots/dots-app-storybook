@@ -1,0 +1,38 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Slider from "../components/slider/Slider";
+
+<Meta title="Design System/Slider" component={Slider} />
+
+# Button
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <Slider
+      size="small"
+      defaultValue={70}
+      aria-label="Small"
+      valueLabelDisplay="auto"
+    />
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => <Slider {...args} />;
+
+<Story name="standard">{Template.bind({})}</Story>

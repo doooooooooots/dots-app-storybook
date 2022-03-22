@@ -1,10 +1,10 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 
-import Button from "../components/button/Button";
+import Box from "../components/box/Box";
 
 <Meta
-  title="Design System/Button"
-  component={Button}
+  title="Design System/Box"
+  component={Box}
   argTypes={{
     variant: {
       options: ["text", "contained", "outlined"],
@@ -13,7 +13,7 @@ import Button from "../components/button/Button";
   }}
 />
 
-# Button
+# Box
 
 ### Controls
 
@@ -29,7 +29,7 @@ blablabla text
 
 <Story name="initials">
   <div>
-    <Button variant="text">Button</Button>
+    <Box>Box</Box>
   </div>
 </Story>
 
@@ -37,6 +37,6 @@ blablabla text
 
 blablabla text
 
-export const Template = (args) => <Button {...args}>Button</Button>;
+export const Template = (args) => <Box {...args}>Box</Box>;
 
 <Story name="standard">{Template.bind({})}</Story>
